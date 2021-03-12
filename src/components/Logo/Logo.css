@@ -19,10 +19,10 @@
 
 .logo-box .logo-message {
     color: #aaa;
-    font-weight: 100;
-    font-size: 24px;
+    font-weight: 200;
+    font-size: 18px;
     position: absolute;
-    bottom: -30px;
-    left: -20px;
+    bottom: -25px;
+    left: 5px;
     min-width: 400px;
 }
