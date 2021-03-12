@@ -1,0 +1,28 @@
+.logo-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.logo-box i {
+    color: rgb(40, 40, 200);
+}
+
+.logo-box span {
+    font-weight: 100;
+    color: rgb(40, 40, 200);
+    transition: all 0.1s ease;
+}
+
+.logo-box .logo-message {
+    color: #aaa;
+    font-weight: 100;
+    font-size: 24px;
+    position: absolute;
+    bottom: -30px;
+    left: -20px;
+    min-width: 400px;
+}
