@@ -1,8 +1,12 @@
 import React from 'react'
+import './Button.css'
 
 const Button = ({count, setCount}) => {
     return (
-        <button className='btn btn-block btn-dark' onClick={() => setCount(count + 1)}>Load More</button>
+        <div className='button-box'>
+            <button className='btn btn-dark' onClick={() => setCount(count + 1)}>Load More</button>
+        </div>
+        
     )
 }
 
