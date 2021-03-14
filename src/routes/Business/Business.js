@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import Header from '../../components/Header/Header'
 import Advert from '../../components/Advert/Advert'
 import RouteName from '../../components/RouteName/RouteName'
