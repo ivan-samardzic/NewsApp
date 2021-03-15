@@ -5,7 +5,7 @@ import './Article.css'
 const Article = ({article, type}) => {
     if(type === 'headline') {
         return (
-            <Link to={article.url}>
+            <Link to={`/${article.url}`}>
                 <div className='article-box'>
                     <img className="article-poster" src={article.urlToImage} alt="article-poster" />
                     <div className="article-details">
@@ -19,7 +19,7 @@ const Article = ({article, type}) => {
     }
     else if (type === 'side'){
         return (
-            <Link to={article.url}>
+            <Link to={`/${article.url}`}>
                 <div className='side-box'>
                     <img className="side-poster" src={article.urlToImage} alt="side-poster" />
                     <div className="side-details">

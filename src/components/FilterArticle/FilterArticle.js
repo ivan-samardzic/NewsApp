@@ -4,7 +4,7 @@ import './FilterArticle.css'
 
 const FilterArticle = ({article}) => {
     return (
-        <Link to={article.url}>
+        <Link to={`/${article.url}`}>
             <div className='filter-box'>
                     <img className='filter-poster' src={article.urlToImage} alt='image' />
                     <div className='filter-details'>
