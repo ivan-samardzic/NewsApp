@@ -30,7 +30,7 @@
 
 
 .navbar-box .navbar-box-list li:hover {
-    border-bottom: 3px solid rgb(40, 40, 200);
+    border-bottom: 3px solid rgba(40, 40, 200);
 }
 
 .navbar-box .navbar-box-list li a {
