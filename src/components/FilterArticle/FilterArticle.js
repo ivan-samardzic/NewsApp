@@ -4,15 +4,14 @@ import './FilterArticle.css'
 
 const FilterArticle = ({article}) => {
     return (
-        <Link to={`/${article.url}`}>
-            <div className='filter-box'>
-                    <img className='filter-poster' src={article.urlToImage} alt='image' />
-                    <div className='filter-details'>
-                        <div className='filter-title'>{article.title}</div>
-                        <div className='filter-description'>{article.description}</div>
-                    </div>
-            </div>
-        </Link>
+        <div className='filter-box'>
+                <img className='filter-poster' src={article.urlToImage} alt='image' />
+                <div className='filter-details'>
+                    <div className='filter-title'>{article.title}</div>
+                    <div className='filter-description'>{article.description}</div>
+                    <button className='btn'><a href={article.url}><i className="fas fa-arrow-right"></i></a></button>
+                </div>
+        </div>
     )
 }
 

@@ -33,3 +33,21 @@
 .filter-box .filter-details .filter-description {
     font-size: 16px;
 }
+
+.filter-box .filter-details button {
+    margin-top: 10px;
+    transition:  all 0.3s ease;
+}
+
+.filter-box .filter-details button:hover {
+    background-color: #333;
+}
+
+.filter-box .filter-details button a {
+    color: #fff;
+    transition:  all 0.3s ease;
+}
+
+.filter-box .filter-details button a:hover {
+    color: #ccc;
+}
