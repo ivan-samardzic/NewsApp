@@ -1,6 +1,6 @@
 import React from 'react'
 import FilterArticle  from '../FilterArticle/FilterArticle'
-import './FilterArticlesBox.css'
+import './FilterArticlesBox.scss'
 
 const FilterArticlesBox = ({filterArticles}) => {
     return (

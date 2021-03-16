@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './FilterArticle.css'
+import './FilterArticle.scss'
 
 const FilterArticle = ({article}) => {
     return (

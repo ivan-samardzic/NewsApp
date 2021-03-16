@@ -1,0 +1,47 @@
+.filter-box {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	margin: 25px auto;
+	width: 800px;
+	background-color: #eee;
+	.filter-poster {
+		position: relative;
+		width: 800px;
+	}
+	.filter-details {
+		position: absolute;
+		bottom: 0%;
+		width: 800px;
+		padding: 10px 30px 10px 30px;
+		background-color: rgba(0,0,0,0.4);
+		transition: all 0.3s ease;
+		&:hover {
+			background-color: rgba(0,0,0,0.75);
+		}
+		.filter-title {
+			color: #fff;
+			width: 750px;
+			font-size: 24px;
+		}
+		.filter-description {
+			color: #fff;
+			width: 750px;
+			font-size: 16px;
+		}
+		button {
+			margin-top: 10px;
+			transition: all 0.3s ease;
+			&:hover {
+				background-color: #333;
+			}
+			a {
+				color: #fff;
+				transition: all 0.3s ease;
+				&:hover {
+					color: #ccc;
+				}
+			}
+		}
+	}
+}

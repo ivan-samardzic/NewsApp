@@ -1,5 +1,5 @@
 import React from 'react'
-import './ArticlesBox.css'
+import './ArticlesBox.scss'
 import Article from '../Article/Article'
 
 const ArticlesBox = ({headlineArticles, sideArticles}) => {
