@@ -16,7 +16,7 @@ const Science = (props) => {
             {context => (
                 <div className='container-fluid'>
                     <Header size='36px' />
-                    <Advert image='https://static.jutarnji.hr/images/live-multimedia/binary/2018/9/28/17/a1.png' />
+                    <Advert image='https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f538c469353173.5b7ebeb00a8da.gif' />
                     <RouteName name='Science' />
                     {context.loading ? <Spinner /> : 
                     <ArticlesBox headlineArticles={context.headlineScienceArticles} sideArticles={context.sideScienceArticles} />}
