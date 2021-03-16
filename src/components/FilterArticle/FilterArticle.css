@@ -3,27 +3,32 @@
     flex-direction: column;
     position: relative;
     margin: 25px auto;
-    width: 1100px;
+    width: 800px;
     background-color: #eee;
 }
 
 .filter-box .filter-poster {
     position: relative;
-    width: 1100px;
+    width: 800px;
 }
 
 .filter-box .filter-details {
     position: absolute;
     bottom: 0%;
-    width: 1100px;
-    padding: 10px 30px 30px 30px;
-    background-color: rgba(0,0,0,0.9);
+    width: 800px;
+    padding: 10px 30px 10px 30px;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+}
+
+.filter-box .filter-details:hover {
+    background-color: rgba(0,0,0,0.75);
 }
 
 .filter-box .filter-details .filter-title,
 .filter-box .filter-details .filter-description {
     color: #fff;
-    width: 1050px;
+    width: 750px;
 }
 
 .filter-box .filter-details .filter-title {
