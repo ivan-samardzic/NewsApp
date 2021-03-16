@@ -1,11 +1,14 @@
 import React from 'react'
 import './RouteName.css'
+import { Link } from 'react-router-dom'
 
 const RouteName = ({name}) => {
     return (
-        <div className='route-name-box'>
-            <h3 className='route-name-item'>{name}</h3>
-        </div>
+        <Link to={`${name}`}>
+            <div className='route-name-box'>
+                <h3 className='route-name-item'>{name}</h3>
+            </div>
+        </Link>
     )
 }
 
