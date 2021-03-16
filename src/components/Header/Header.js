@@ -1,5 +1,5 @@
 import React from 'react'
-import './Header.css'
+import './Header.scss'
 import Logo from '../Logo/Logo'
 import Navbar from '../Navbar/Navbar'
 import SearchBox from '../SearchBox/SearchBox'
