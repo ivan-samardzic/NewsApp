@@ -17,7 +17,7 @@ screen.
 App will use:
 1. React (React Router, React Hooks, React JSX, React Link, React Props, React Stats and more)
 2. Context Api 
-3. CSS, SCSS, GoogleFonts, FontAwesome and Bootstrap
+3. SCSS, GoogleFonts, FontAwesome and Bootstrap
 4. Git and Postman
 
 Requirements List:
