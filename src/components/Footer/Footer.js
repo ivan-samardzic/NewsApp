@@ -1,5 +1,5 @@
 import React from 'react'
-import './Footer.css'
+import './Footer.scss'
 import Logo from '../Logo/Logo'
 import CopyrightBox from '../CopyrightBox/CopyrightBox'
 import SocialMediaBox from '../SocialMediaBox/SocialMediaBox'
