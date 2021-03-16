@@ -17,8 +17,15 @@ screen.
 App will use:
 1. React (React Router, React Hooks, React JSX, React Link, React Props, React Stats and more)
 2. Context Api 
-3. CSS, GoogleFonts, FontAwesome and Bootstrap
+3. CSS, SCSS, GoogleFonts, FontAwesome and Bootstrap
 4. Git and Postman
+
+Requirements List:
+1. App must contain a home page for all articles grouped by categories which News API provides
+2. Each category must be clickable and lead to category page where all articles from that category can be read
+3. The app must have a search filter on the home page or categora page
+4. The app should have a button that must be clickable and by clicking it number of rendered articles from each category should be
+doubled
 
 ### Deployment
 
