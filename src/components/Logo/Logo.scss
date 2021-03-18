@@ -5,22 +5,50 @@
 	justify-content: center;
 	cursor: pointer;
 	position: relative;
+	a {
+		text-decoration: none;
+	}
 	i {
 		color: rgb(140, 140, 240);
 		font-weight: 600;
+		font-size: 32px;
 	}
 	span {
 		font-weight: 100;
 		color: rgb(140, 140, 240);
 		transition: all 0.1s ease;
+		font-size: 32px;
 	}
-	.logo-message {
-		color: #aaa;
-		font-weight: 200;
-		font-size: 18px;
-		position: absolute;
-		bottom: -25px;
-		left: 5px;
+}
+
+@media screen and (max-width:1300px) {
+	.logo-box {
+		display: flex;
+		i {
+			font-size: 32px;
+		}
+		span {
+			font-size: 32px;
+		}
+	}
+}
+
+@media screen and(max-width: 750px) {
+	.logo-box {
+		margin-left: 20px;
+	}
+}
+
+@media screen and(max-width: 650px) {
+	.logo-box {
 		min-width: 400px;
+		margin-left: -200px;
+	}
+}
+
+@media screen and(max-width: 475px) {
+	.logo-box {
+		min-width: 400px;
+		margin-left: -150px;
 	}
 }
