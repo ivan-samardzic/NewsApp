@@ -1,0 +1,30 @@
+.hamburger {
+    display: flex;
+    margin: auto 20px;
+    margin-left: 400px;
+    cursor: pointer;
+    i {
+        font-size: 32px;
+        color: white;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .hamburger {
+        display: none;
+        i {
+            color: white;
+            font-size: 32px;
+        }
+    }
+}
+
+@media screen and(max-width: 650px) {
+    .hamburger {
+        position: absolute;
+        right: 5%;
+        i{
+            font-size: 40px;
+        }
+    }
+}
