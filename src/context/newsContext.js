@@ -30,6 +30,8 @@ const NewsContext = createContext({
     setSportsCount: sportsCount => {},
     techCount: 1,
     setTechCount: techCount => {},
+    sidebarOpen: false,
+    setSidebarOpen: sidebarOpen => {},
 });
 
 export default NewsContext;

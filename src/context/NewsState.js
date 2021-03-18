@@ -2,7 +2,7 @@ import React, { useState, useReducer, useEffect } from 'react';
 import NewsContext from './newsContext';
 import axios from 'axios';
 
-const api_key = '4b39208e6f1d4eb1b50a674762d71892';
+const api_key = 'df8cd5dbf1d04e98aabbb5e30d14cee2';
 
 const NewsState = props => {
     const [headlineHomeArticles, setHeadlineHomeArticles] = useState({})
@@ -27,12 +27,13 @@ const NewsState = props => {
     const [scienceCount, setScienceCount] = useState(1)
     const [sportsCount, setSportsCount] = useState(1)
     const [techCount, setTechCount] = useState(1)
+    const [sidebarOpen, setSidebarOpen] = useState(false)
 
 
     useEffect(() => {
-        setLoading(true)
+        
         const searchHomeArticles = async(homeCount) => {
-
+            setLoading(true)
             const responseSideHome = await axios.get(`https://newsapi.org/v2/top-headlines?country=ca&category=general&apiKey=${api_key}&pageSize=${homeCount*8}`);
             const responseSideHomeJSON = await responseSideHome.data;
 
@@ -51,7 +52,6 @@ const NewsState = props => {
 
 
     useEffect(() => {
-        setLoading(true)
         const searchBusinessArticles = async(businessCount) => {
             const responseSideBusiness = await axios.get(`https://newsapi.org/v2/top-headlines?country=ca&category=business&apiKey=${api_key}&pageSize=${businessCount*8}`);
             const responseSideBusinessJSON = await responseSideBusiness.data;
@@ -69,10 +69,9 @@ const NewsState = props => {
     }, [businessCount])
 
     useEffect(() => {
-        setLoading(true);
         const searchHealthArticles = async(healthCount) => {
 
-            const responseSideHealth = await axios.get(`https://newsapi.org/v2/top-headlines?country=ca&category=health&apiKey=${api_key}&pageSize=${healthCount*8}`);
+            const responseSideHealth = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=${api_key}&pageSize=${healthCount*8}`);
             const responseSideHealthJSON = await responseSideHealth.data;
 
             const responseHeadHealth = await axios.get(`https://newsapi.org/v2/top-headlines?country=ca&category=health&apiKey=${api_key}&pageSize=${healthCount*4}`);
@@ -89,7 +88,6 @@ const NewsState = props => {
 
     useEffect(() => {
         const searchScienceArticles = async(scienceCount) => {
-            setLoading(true);
             const responseSideScience = await axios.get(`https://newsapi.org/v2/top-headlines?country=ca&category=science&apiKey=${api_key}&pageSize=${scienceCount*8}`);
             const responseSideScienceJSON = await responseSideScience.data;
 
@@ -99,7 +97,6 @@ const NewsState = props => {
             if (responseSideScienceJSON && responseHeadScienceJSON) {
                 setHeadlineScienceArticles(responseHeadScienceJSON)
                 setSideScienceArticles(responseSideScienceJSON)
-                setLoading(false)
             }
         };
         searchScienceArticles(scienceCount);
@@ -107,7 +104,6 @@ const NewsState = props => {
 
     useEffect(() => {
         const searchMediaArticles = async(mediaCount) => {
-            setLoading(true);
             const responseSideMedia = await axios.get(`https://newsapi.org/v2/top-headlines?country=ca&category=entertainment&apiKey=${api_key}&pageSize=${mediaCount*8}`);
             const responseSideMediaJSON = await responseSideMedia.data;
 
@@ -117,7 +113,6 @@ const NewsState = props => {
             if (responseSideMediaJSON && responseHeadMediaJSON) {
                 setHeadlineMediaArticles(responseHeadMediaJSON)
                 setSideMediaArticles(responseSideMediaJSON)
-                setLoading(false)
             }
         };
 
@@ -126,7 +121,6 @@ const NewsState = props => {
 
     useEffect(() => {
         const searchSportsArticles = async(sportsCount) => {
-            setLoading(true);
             const responseSideSports = await axios.get(`https://newsapi.org/v2/top-headlines?country=ca&category=sports&apiKey=${api_key}&pageSize=${sportsCount*8}`);
             const responseSideSportsJSON = await responseSideSports.data;
 
@@ -136,7 +130,6 @@ const NewsState = props => {
             if (responseSideSportsJSON && responseHeadSportsJSON) {
                 setHeadlineSportsArticles(responseHeadSportsJSON)
                 setSideSportsArticles(responseSideSportsJSON)
-                setLoading(false)
             }
         };
         searchSportsArticles(sportsCount);
@@ -144,7 +137,6 @@ const NewsState = props => {
 
     useEffect(() => {
         const searchTechArticles = async(techCount) => {
-            setLoading(true)
             const responseSideTech = await axios.get(`https://newsapi.org/v2/top-headlines?country=ca&category=technology&apiKey=${api_key}&pageSize=${techCount*8}`);
             const responseSideTechJSON = await responseSideTech.data;
 
@@ -154,7 +146,6 @@ const NewsState = props => {
             if (responseSideTechJSON && responseHeadTechJSON) {
                 setHeadlineTechArticles(responseHeadTechJSON)
                 setSideTechArticles(responseSideTechJSON)
-                setLoading(false)
             }
         };
         searchTechArticles(techCount);
@@ -192,6 +183,8 @@ const NewsState = props => {
             setSportsCount: setSportsCount,
             techCount: techCount,
             setTechCount: setTechCount,
+            sidebarOpen: sidebarOpen, 
+            setSidebarOpen: setSidebarOpen,
         }}> 
             { props.children } 
         </NewsContext.Provider>
