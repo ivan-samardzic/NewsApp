@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect, useContext } from 'react'
 import Header from '../../components/Header/Header'
+import Sidebar from '../../components/Sidebar/Sidebar'
 import Advert from '../../components/Advert/Advert'
 import RouteName from '../../components/RouteName/RouteName'
 import ArticlesBox from '../../components/ArticlesBox/ArticlesBox';
@@ -14,17 +15,25 @@ const Sports = (props) => {
     return (
         <NewsContext.Consumer>
             {context => (
-                <div className='container-fluid'>
-                    <Header size='36px' />
-                    <Advert image='https://static.jutarnji.hr/images/live-multimedia/binary/2018/9/28/17/a1.png' />
-                    <RouteName name='Sports' />
-                    {context.loading ? <Spinner /> : 
-                    <ArticlesBox headlineArticles={context.headlineSportsArticles} sideArticles={context.sideSportsArticles} />}
-                    <Button count={context.sportsCount} setCount={context.setSportsCount} />
-                    <Footer size='48px' />
+            <div className='container-fluid'>
+                <Header size='36px' onAdd={() => context.setSidebarOpen(!context.sidebarOpen)} sidebarOpen={context.sidebarOpen} />
+
+                <div className='advert'>
+                    <Advert image='https://belizagrebgrad.com.hr/wp-content/uploads/2020/12/unnamed-18-e1607779669396.jpg' />
                 </div>
+
+                <RouteName name='sports' />
+                {context.loading ? <Spinner /> : 
+                <ArticlesBox headlineArticles={context.headlineSportsArticles} sideArticles={context.sideSportsArticles} />}
+                <Button count={context.sportsCount} setCount={context.setSportsCount} />
+
+                <div className='sidebar' >
+                    <Sidebar sidebarOpen={context.sidebarOpen}/>
+                </div>
+
+                <Footer size='48px' />
+            </div>
             )}
-        
         </NewsContext.Consumer>
     )
 }

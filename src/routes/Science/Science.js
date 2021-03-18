@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect, useContext } from 'react'
 import Header from '../../components/Header/Header'
+import Sidebar from '../../components/Sidebar/Sidebar'
 import Advert from '../../components/Advert/Advert'
 import RouteName from '../../components/RouteName/RouteName'
 import ArticlesBox from '../../components/ArticlesBox/ArticlesBox';
@@ -14,15 +15,24 @@ const Science = (props) => {
     return (
         <NewsContext.Consumer>
             {context => (
-                <div className='container-fluid'>
-                    <Header size='36px' />
-                    <Advert image='https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f538c469353173.5b7ebeb00a8da.gif' />
-                    <RouteName name='Science' />
-                    {context.loading ? <Spinner /> : 
-                    <ArticlesBox headlineArticles={context.headlineScienceArticles} sideArticles={context.sideScienceArticles} />}
-                    <Button count={context.scienceCount} setCount={context.setScienceCount} />
-                    <Footer size='48px' />
+            <div className='container-fluid'>
+                <Header size='36px' onAdd={() => context.setSidebarOpen(!context.sidebarOpen)} sidebarOpen={context.sidebarOpen} />
+
+                <div className='advert'>
+                    <Advert image='https://belizagrebgrad.com.hr/wp-content/uploads/2020/12/unnamed-18-e1607779669396.jpg' />
                 </div>
+
+                <RouteName name='science' />
+                {context.loading ? <Spinner /> : 
+                <ArticlesBox headlineArticles={context.headlineScienceArticles} sideArticles={context.sideScienceArticles} />}
+                <Button count={context.scienceCount} setCount={context.setScienceCount} />
+
+                <div className='sidebar' >
+                    <Sidebar sidebarOpen={context.sidebarOpen}/>
+                </div>
+
+                <Footer size='48px' />
+            </div>
             )}
         </NewsContext.Consumer>
     )
