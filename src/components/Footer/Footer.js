@@ -7,7 +7,9 @@ import SocialMediaBox from '../SocialMediaBox/SocialMediaBox'
 const Footer = ({size}) => {
     return (
         <footer>
-            <Logo size={size} />
+            <div className='footer-logo'>
+                <Logo size={size} />
+            </div>
             <CopyrightBox />
             <SocialMediaBox />
         </footer>

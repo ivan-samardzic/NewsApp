@@ -2,10 +2,10 @@ import React from 'react'
 import './Navbar.scss'
 import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({direction}) => {
     return (
         <nav className='navbar-box'>
-            <ul className='navbar-box-list'>
+            <ul className='navbar-box-list' style={{flexDirection : direction}}>
                 <li>
                     <Link to='/'>Home</Link>
                 </li>

@@ -3,6 +3,7 @@
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
+	margin: auto 40px;
 	.navbar-box-list {
 		display: flex;
 		flex-direction: row;
@@ -10,7 +11,7 @@
 		align-items: center;
 		justify-content: space-around;
 		min-width: 400px;
-		margin: 10px auto;
+		margin: auto;
 		background-color: white;
 		li {
 			width: 90px;

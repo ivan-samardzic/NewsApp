@@ -5,4 +5,26 @@
 	justify-content: space-around;
 	background-color: #030303;
 	height: 10vh;
+
+	.center-header-box {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		min-width: 1000px;
+	}
+}
+
+@media screen and(max-width: 1300px) {
+	.header {
+		display: flex;
+		.center-header-box {
+			display: none;
+		}
+	}
+}
+
+@media screen and(max-width: 750px) {
+	.header {
+		height: 12vh;
+	}
 }
