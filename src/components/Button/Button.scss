@@ -10,3 +10,53 @@
 		margin: auto;
 	}
 }
+
+@media screen and(max-width:1100px) {
+	.button-box {
+		width: 1000px;
+		button {
+			width: 200px;
+			margin: auto;
+		}
+	}
+}
+
+@media screen and(max-width:1000px) {
+	.button-box {
+		width: 900px;
+		button {
+			width: 200px;
+			margin: auto;
+		}
+	}
+}
+
+@media screen and(max-width:800px) {
+	.button-box {
+		width: 600px;
+		button {
+			width: 200px;
+			margin: auto;
+		}
+	}
+}
+
+@media screen and(max-width:600px) {
+	.button-box {
+		width: 400px;
+		button {
+			width: 200px;
+			margin: auto;
+		}
+	}
+}
+
+@media screen and(max-width:420px) {
+	.button-box {
+		width: 340px;
+		button {
+			width: 200px;
+			margin: auto;
+		}
+	}
+}
