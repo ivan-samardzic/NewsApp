@@ -33,3 +33,52 @@
 		}
 	}
 }
+
+@media screen and(max-width:1100px) {
+	.copyright-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 20px auto;
+	}
+}
+
+@media screen and(max-width:750px) {
+	.copyright-box {
+		display: flex;
+		.copyright-sign {
+			font-size: 16px;
+			color: #555;
+			font-weight: 600;
+			i {
+				font-size: 24px;
+				color: #888;
+				font-weight: 200;
+			}
+		}
+		.app-description {
+			color: #777;
+			font-weight: 100;
+			font-size: 18px;
+			max-width: 400px;
+			text-align: center;
+		}
+		.app-version {
+			color: #777;
+			font-weight: 100;
+			font-size: 24px;
+			max-width: 400px;
+			text-align: center;
+			a {
+				text-decoration: none;
+				margin: auto 5px;
+				font-weight: 600;
+				color: #555;
+				transform: all 0.2s ease;
+				&:hover {
+					color: #000;
+				}
+			}
+		}
+	}
+}
