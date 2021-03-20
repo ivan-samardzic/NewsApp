@@ -14,7 +14,7 @@ const Home = (props) => {
     return (
         <NewsContext.Consumer>
             {context => (
-                <div className='container-fluid'>
+                <div>
                     <Header size='36px' onAdd={() => context.setSidebarOpen(!context.sidebarOpen)} sidebarOpen={context.sidebarOpen} />
 
                     <div className='advert'>
