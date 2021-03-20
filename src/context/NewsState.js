@@ -2,7 +2,7 @@ import React, { useState, useReducer, useEffect } from 'react';
 import NewsContext from './newsContext';
 import axios from 'axios';
 
-const api_key = 'df8cd5dbf1d04e98aabbb5e30d14cee2';
+const api_key = '4b39208e6f1d4eb1b50a674762d71892';
 
 const NewsState = props => {
     const [headlineHomeArticles, setHeadlineHomeArticles] = useState({})
@@ -121,10 +121,10 @@ const NewsState = props => {
 
     useEffect(() => {
         const searchSportsArticles = async(sportsCount) => {
-            const responseSideSports = await axios.get(`https://newsapi.org/v2/top-headlines?country=ca&category=sports&apiKey=${api_key}&pageSize=${sportsCount*8}`);
+            const responseSideSports = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=${api_key}&pageSize=${sportsCount*8}`);
             const responseSideSportsJSON = await responseSideSports.data;
 
-            const responseHeadSports = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=${api_key}&pageSize=${sportsCount*4}`);
+            const responseHeadSports = await axios.get(`https://newsapi.org/v2/top-headlines?country=gb&category=sports&apiKey=${api_key}&pageSize=${sportsCount*4}`);
             const responseHeadSportsJSON = await responseHeadSports.data;
 
             if (responseSideSportsJSON && responseHeadSportsJSON) {
