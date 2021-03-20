@@ -20,6 +20,7 @@ App will use:
 2. Context Api 
 3. SCSS, GoogleFonts, FontAwesome and Bootstrap
 4. Git and Postman
+5. Responsive Web
 
 Requirements List:
 1. App must contain a home page for all articles grouped by categories which News API provides
