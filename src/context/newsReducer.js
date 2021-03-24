@@ -1,3 +1,3 @@
-export const noteReducer = (state, action) => {
+export const newsReducer = (state, action) => {
 
 };
