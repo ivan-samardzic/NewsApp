@@ -32,5 +32,12 @@ doubled
 6. By clicking on the button located in the sidebar of the page of each category, it is possible to open or close the sidebar
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+You can check out my news app by using this link `https://ivan-samardzic-news-app.netlify.app/`. I'm sorry if loading gif is the only 
+element on the app. The reason may be because NewsAPI allows only 100 fetches in a single day, maybe other people tried to use this app.
+
+You can solve this problem by downloading this project inside your local repo, loging inside NewsAPI website and taking your own api key
+which will provide you an abillity to use this app 100 times per a day, the only thing you have to do is to change api key value inside 
+context folder.
+
+
 
